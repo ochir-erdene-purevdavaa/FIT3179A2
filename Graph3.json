@@ -1,0 +1,63 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 400,
+  "height": 400,
+  "projection": {
+    "type": "mercator",
+    "center": [135, -25]
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "states.json",
+        "format": {
+          "type": "topojson",
+          "feature": "states"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "stroke": "black",
+        "fill": "lightgray"
+      }
+    },
+    {
+      "data": {
+        "url": "states.json",
+        "format": {
+          "type": "topojson",
+          "feature": "states"
+        }
+      },
+      "transform": [
+        {
+            "filter": "datum.Class == 'Insecta'"
+        },
+        {
+            "aggregate": [{"op": "sum", "field": "Species_Count", "as": "Species_Count"}],
+            "groupby": ["State"]
+        },
+        {
+          "lookup": "properties.STATE_NAME",
+          "from": {
+            "data": {"url": "functional_group_richness_by_state.csv"},
+            "key": "State",
+            "fields": ["Species_Count"]
+          }
+        }
+      ],
+      "mark": {"type": "geoshape", "stroke": "black"},
+      "encoding": {
+        "color": {
+          "field": "Species_Count",
+          "type": "quantitative",
+          "scale": {"scheme": "viridis"}
+        },
+        "tooltip": [
+          {"field": "properties.STATE_NAME", "title": "State"},
+          {"field": "Species_Count", "title": "Species Count"}
+        ]
+      }
+    }
+  ]
+}

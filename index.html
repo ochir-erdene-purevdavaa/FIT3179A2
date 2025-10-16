@@ -1,20 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
-    <script src="vega_lite.js"></script>
-    <title>First Vega-Lite graph </title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Australian Species Maps</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Vega scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+  <script src="vega_lite.js"></script>
 </head>
-
 <body>
-    <h1>First Vega-Lite graph</h1>
-    <div id="map1">
-    </div>
-</body>
 
+  <header>
+    <h1>Australian Biodiversity Dashboard</h1>
+  </header>
+
+  <main>
+    <!-- Map 1 with side text -->
+    <div class="map-section">
+      <div class="map-above-text">Overview of species richness by state.</div>
+      <div class="map-row"> 
+      <div id="map1" class="map-div"></div>
+        <div class="map-text">
+          This map shows the total species richness for each Australian state. Darker colors indicate higher richness.
+          You can explore which states host the most biodiversity.
+        </div>
+      </div>
+    </div>
+
+    <!-- Map 2 -->
+    <div class="map-section">
+      <div class="map-above-text">Functional group richness by state.</div>
+      <div class="map-row">
+      <div id="map2" class="map-div"></div>
+      <div class="map-text">
+          Lorem Ipsum.
+        </div>
+      </div>
+    </div>
+
+    <!-- Map 3 -->
+    <div class="map-section">
+      <div class="map-above-text">Individual species distribution points.</div>
+      <div class="map-row">
+      <div id="map3" class="map-div"></div>
+      <div class="map-text">
+          Lorem Ipsum.
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Australian Biodiversity Data</p>
+  </footer>
+
+</body>
 </html>

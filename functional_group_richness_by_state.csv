@@ -1,0 +1,266 @@
+State,Class,Species_Count
+Victoria,Insecta,2799
+Victoria,Aves,509
+Victoria,Reptilia,98
+Victoria,Arachnida,185
+Victoria,Actinopterygii,176
+Victoria,Mammalia,91
+Victoria,Gastropoda,311
+Victoria,Malacostraca,96
+Victoria,Bivalvia,71
+Victoria,Chondrichthyes,22
+Victoria,Asteroidea,22
+Victoria,Diplopoda,2
+Victoria,Amphibia,23
+Victoria,Echinoidea,10
+Victoria,Polychaeta,2
+Victoria,Anthozoa,13
+Victoria,Gymnolaemata,3
+Victoria,Chilopoda,4
+Victoria,Cephalopoda,15
+Victoria,Scyphozoa,5
+Victoria,Polyplacophora,8
+Victoria,Ascidiacea,12
+Victoria,Rhabditophora,10
+Victoria,Hydrozoa,6
+Victoria,Demospongiae,7
+Victoria,Maxillopoda,12
+Victoria,Rhynchonellata,1
+Victoria,Holothuroidea,3
+Victoria,Collembola,6
+Victoria,Crinoidea,3
+Victoria,Oligochaeta,5
+Victoria,,4
+Victoria,Ophiuroidea,3
+Victoria,Calcarea,2
+Victoria,Branchiopoda,2
+Victoria,Stenolaemata,1
+Victoria,Pycnogonida,1
+Victoria,Nemertinea,1
+Victoria,Bdelloidea,1
+South Australia,Actinopterygii,216
+South Australia,Aves,494
+South Australia,Malacostraca,77
+South Australia,Insecta,1220
+South Australia,Mammalia,74
+South Australia,Gastropoda,213
+South Australia,Amphibia,18
+South Australia,Bivalvia,85
+South Australia,Arachnida,125
+South Australia,Chilopoda,6
+South Australia,Asteroidea,25
+South Australia,Reptilia,145
+South Australia,Chondrichthyes,31
+South Australia,Diplopoda,1
+South Australia,Echinoidea,18
+South Australia,Holothuroidea,6
+South Australia,Anthozoa,17
+South Australia,Gymnolaemata,13
+South Australia,Cephalopoda,13
+South Australia,Ascidiacea,26
+South Australia,Polyplacophora,21
+South Australia,Demospongiae,13
+South Australia,Ophiuroidea,11
+South Australia,Polychaeta,14
+South Australia,Scyphozoa,3
+South Australia,Enteropneusta,1
+South Australia,Maxillopoda,10
+South Australia,Crinoidea,4
+South Australia,Rhabditophora,3
+South Australia,Cubozoa,1
+South Australia,Hydrozoa,5
+South Australia,Rhynchonellata,3
+South Australia,Oligochaeta,1
+South Australia,Stenolaemata,1
+South Australia,Pycnogonida,2
+South Australia,Collembola,1
+South Australia,Nemertinea,1
+South Australia,Calcarea,1
+South Australia,,4
+New South Wales,Aves,633
+New South Wales,Reptilia,185
+New South Wales,Mammalia,154
+New South Wales,Insecta,4057
+New South Wales,Gastropoda,675
+New South Wales,Actinopterygii,582
+New South Wales,Anthozoa,36
+New South Wales,Malacostraca,139
+New South Wales,Amphibia,72
+New South Wales,Bivalvia,122
+New South Wales,Cephalopoda,16
+New South Wales,Arachnida,315
+New South Wales,Asteroidea,23
+New South Wales,Chondrichthyes,39
+New South Wales,Echinoidea,25
+New South Wales,Polyplacophora,16
+New South Wales,Holothuroidea,12
+New South Wales,Chilopoda,12
+New South Wales,Ascidiacea,19
+New South Wales,Hydrozoa,10
+New South Wales,Diplopoda,9
+New South Wales,Hirudinida,2
+New South Wales,Maxillopoda,13
+New South Wales,Scyphozoa,16
+New South Wales,Collembola,6
+New South Wales,Demospongiae,20
+New South Wales,Rhabditophora,23
+New South Wales,Pycnogonida,1
+New South Wales,Nemertinea,1
+New South Wales,Crinoidea,3
+New South Wales,Tentaculata,3
+New South Wales,,10
+New South Wales,Polychaeta,16
+New South Wales,Cubozoa,1
+New South Wales,Oligochaeta,6
+New South Wales,Calcarea,3
+New South Wales,Gymnolaemata,3
+New South Wales,Nuda,1
+New South Wales,Rhynchonellata,1
+New South Wales,Ophiuroidea,4
+New South Wales,Monogononta,1
+New South Wales,Branchiopoda,2
+Queensland,Reptilia,309
+Queensland,Insecta,5164
+Queensland,Aves,736
+Queensland,Amphibia,63
+Queensland,Gastropoda,483
+Queensland,Arachnida,359
+Queensland,Mammalia,147
+Queensland,Actinopterygii,721
+Queensland,Demospongiae,16
+Queensland,Bivalvia,108
+Queensland,,5
+Queensland,Malacostraca,178
+Queensland,Chondrichthyes,50
+Queensland,Anthozoa,45
+Queensland,Rhabditophora,17
+Queensland,Holothuroidea,18
+Queensland,Asteroidea,17
+Queensland,Ophiuroidea,2
+Queensland,Hydrozoa,8
+Queensland,Scyphozoa,6
+Queensland,Chilopoda,11
+Queensland,Branchiopoda,1
+Queensland,Crinoidea,4
+Queensland,Maxillopoda,8
+Queensland,Ascidiacea,6
+Queensland,Monogononta,4
+Queensland,Echinoidea,18
+Queensland,Sarcopterygii,1
+Queensland,Polychaeta,6
+Queensland,Diplopoda,5
+Queensland,Polyplacophora,5
+Queensland,Cephalopoda,12
+Queensland,Oligochaeta,5
+Queensland,Nemertinea,1
+Queensland,Tentaculata,2
+Queensland,Hirudinida,1
+Queensland,Cubozoa,2
+Tasmania,Aves,247
+Tasmania,Bivalvia,50
+Tasmania,Insecta,1031
+Tasmania,Reptilia,17
+Tasmania,Mammalia,66
+Tasmania,Gastropoda,125
+Tasmania,Malacostraca,47
+Tasmania,Crinoidea,1
+Tasmania,Asteroidea,16
+Tasmania,Actinopterygii,103
+Tasmania,Arachnida,134
+Tasmania,Amphibia,8
+Tasmania,Anthozoa,10
+Tasmania,Hydrozoa,2
+Tasmania,Rhabditophora,3
+Tasmania,Chondrichthyes,13
+Tasmania,Cephalopoda,12
+Tasmania,Maxillopoda,10
+Tasmania,Polyplacophora,4
+Tasmania,Echinoidea,5
+Tasmania,Collembola,4
+Tasmania,Gymnolaemata,5
+Tasmania,Diplopoda,1
+Tasmania,,1
+Tasmania,Stenolaemata,1
+Tasmania,Polychaeta,2
+Tasmania,Scyphozoa,4
+Tasmania,Ascidiacea,5
+Tasmania,Demospongiae,2
+Tasmania,Ophiuroidea,1
+Tasmania,Holothuroidea,1
+Western Australia,Aves,472
+Western Australia,Reptilia,264
+Western Australia,Mammalia,87
+Western Australia,Gastropoda,464
+Western Australia,Insecta,1166
+Western Australia,Asteroidea,30
+Western Australia,Amphibia,47
+Western Australia,Diplopoda,3
+Western Australia,Actinopterygii,544
+Western Australia,Chondrichthyes,52
+Western Australia,Arachnida,143
+Western Australia,Bivalvia,98
+Western Australia,Malacostraca,110
+Western Australia,Echinoidea,13
+Western Australia,Cephalopoda,13
+Western Australia,Polychaeta,4
+Western Australia,Scyphozoa,5
+Western Australia,Chilopoda,6
+Western Australia,Anthozoa,38
+Western Australia,Hydrozoa,6
+Western Australia,Holothuroidea,12
+Western Australia,Polyplacophora,6
+Western Australia,Demospongiae,9
+Western Australia,Maxillopoda,5
+Western Australia,Ascidiacea,7
+Western Australia,,3
+Western Australia,Nuda,1
+Western Australia,Rhabditophora,11
+Western Australia,Gymnolaemata,3
+Western Australia,Crinoidea,4
+Western Australia,Branchiopoda,2
+Western Australia,Ophiuroidea,3
+Western Australia,Calcarea,1
+Western Australia,Rhynchonellata,1
+Western Australia,Tentaculata,1
+Australian Capital Territory,Aves,259
+Australian Capital Territory,Insecta,1700
+Australian Capital Territory,Mammalia,47
+Australian Capital Territory,Malacostraca,15
+Australian Capital Territory,Reptilia,50
+Australian Capital Territory,Actinopterygii,48
+Australian Capital Territory,Echinoidea,2
+Australian Capital Territory,Chondrichthyes,6
+Australian Capital Territory,Gastropoda,41
+Australian Capital Territory,Asteroidea,3
+Australian Capital Territory,Amphibia,12
+Australian Capital Territory,Cephalopoda,2
+Australian Capital Territory,Arachnida,155
+Australian Capital Territory,Anthozoa,3
+Australian Capital Territory,Rhabditophora,4
+Australian Capital Territory,Chilopoda,4
+Australian Capital Territory,Scyphozoa,1
+Australian Capital Territory,Polyplacophora,1
+Australian Capital Territory,Diplopoda,1
+Australian Capital Territory,Bivalvia,6
+Australian Capital Territory,Ascidiacea,2
+Australian Capital Territory,,2
+Australian Capital Territory,Hirudinida,1
+Australian Capital Territory,Collembola,3
+Northern Territory,Arachnida,67
+Northern Territory,Insecta,736
+Northern Territory,Aves,312
+Northern Territory,Amphibia,14
+Northern Territory,Reptilia,144
+Northern Territory,Actinopterygii,87
+Northern Territory,Mammalia,48
+Northern Territory,Malacostraca,25
+Northern Territory,Gastropoda,66
+Northern Territory,Chondrichthyes,4
+Northern Territory,Chilopoda,4
+Northern Territory,Diplopoda,1
+Northern Territory,Cephalopoda,2
+Northern Territory,Bivalvia,7
+Northern Territory,Polyplacophora,2
+Northern Territory,Echinoidea,1
+Northern Territory,Hydrozoa,1
+Northern Territory,Polychaeta,2
