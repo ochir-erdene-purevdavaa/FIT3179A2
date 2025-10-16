@@ -1,45 +1,59 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 600,
-  "height": 500,
-  "projection": {"type": "mercator"},
+  "width": 400,
+  "height": 400,
+  "projection": {
+    "type": "mercator",
+    "center": [135, -25]
+  },
   "layer": [
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/vega/vega-datasets/master/data/world-110m.json",
-        "format": {"type": "topojson", "feature": "countries"}
+        "url": "states.json",
+        "format": {
+          "type": "topojson",
+          "feature": "states"
+        }
       },
-      "transform": [
-        {"filter": "datum.id == '036'"}
-      ],
-      "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
+      "mark": {
+        "type": "geoshape",
+        "stroke": "black",
+        "fill": "lightgray"
+      }
     },
     {
-      "data": {"url": "species_richness_by_state.csv"},
+      "data": {
+        "url": "states.json",
+        "format": {
+          "type": "topojson",
+          "feature": "states"
+        }
+      },
       "transform": [
         {
-          "lookup": "State",
+          "lookup": "properties.STATE_NAME", 
           "from": {
             "data": {
-              "url": "https://raw.githubusercontent.com/vega/vega-datasets/master/data/australia.json",
-              "format": {"type": "topojson", "feature": "states"}
+              "url": "species_richness_by_state.csv"  
             },
-            "key": "properties.code",
-            "fields": ["geometry", "properties.name"]
+            "key": "State",       
+            "fields": ["Species_Count"]
           }
         }
       ],
-      "mark": {"type": "geoshape"},
+      "mark": {
+        "type": "geoshape",
+        "stroke": "black"
+      },
       "encoding": {
         "color": {
           "field": "Species_Count",
           "type": "quantitative",
-          "scale": {"scheme": "greens"},
-          "title": "Species Richness"
+          "scale": {"scheme": "viridis"}   
         },
         "tooltip": [
-          {"field": "properties.name", "type": "nominal", "title": "State"},
-          {"field": "Species_Count", "type": "quantitative"}
+          {"field": "properties.STATE_NAME", "title": "State"},
+          {"field": "Species_Count", "title": "Species Count"}
         ]
       }
     }
