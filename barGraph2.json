@@ -1,0 +1,17 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 700,
+  "height": 400,
+  "data": {"url": "functional_group_richness_by_state.csv"},
+  "mark": "bar",
+  "encoding": {
+    "x": {"field": "State", "type": "ordinal"},
+    "y": {"field": "Species_Count", "type": "quantitative"},
+    "color": {"field": "Class", "type": "nominal"},
+    "tooltip": [
+      {"field": "State", "type": "nominal"},
+      {"field": "Class", "type": "nominal"},
+      {"field": "Species_Count", "type": "quantitative"}
+    ]
+  }
+}

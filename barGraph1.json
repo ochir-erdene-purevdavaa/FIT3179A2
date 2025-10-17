@@ -1,0 +1,16 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 600,
+  "height": 400,
+  "data": {"url": "species_richness_by_state.csv"},
+  "mark": "bar",
+  "encoding": {
+    "x": {"field": "State", "type": "ordinal", "sort": "-y"},
+    "y": {"field": "Species_Count", "type": "quantitative"},
+    "color": {"field": "Species_Count", "type": "quantitative", "scale": {"scheme": "viridis"}},
+    "tooltip": [
+      {"field": "State", "type": "nominal"},
+      {"field": "Species_Count", "type": "quantitative"}
+    ]
+  }
+}
