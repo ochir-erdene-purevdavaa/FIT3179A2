@@ -1,90 +1,161 @@
+/* General Body */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #ffffff;
+    background-color: #e8f5e9;
     color: #333;
 }
 
+/* Header / Footer */
 header, footer {
     width: 100%;
-    background-color: #48cfa2;
+    background: linear-gradient(90deg, #66bb6a, #388e3c);
     color: white;
     text-align: center;
     padding: 15px 0;
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
-h1 {
-    margin: 0;
-}
-
+/* Main Content */
 main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.05);
 }
 
-.map-section, .chart-container {
+/* Flex Layouts */
+.flex-row, .flex-row-reverse {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
     margin-bottom: 40px;
 }
 
-.map-title, .chart-title {
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.map-above-text, .chart-text, .map-text-side, .chart-text-side {
-    font-size: 0.95rem;
-    line-height: 1.5;
-    color: #555;
-}
-
-.map-above-text {
-    text-align: center;
-    margin: 10px 0;
-}
-
-.flex-row {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    align-items: flex-start;
-}
-
 .flex-row-reverse {
-  display: flex;
-  flex-direction: row-reverse;
-  gap: 20px;
-  align-items: flex-start;
+    flex-direction: row-reverse;
 }
 
-
+/* Text / Side Panels */
 .map-text-side, .chart-text-side {
-    flex: 1;
-    max-width: 300px;
+    flex: 1.2;
+    min-width: 170px;
+    max-width: 350px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #333;
+
+    background-color: #f7f7f7; /* light grey */
+    padding: 15px;              /* inner spacing */
+    border-radius: 8px;          /* rounded corners */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08); /* subtle shadow */
 }
 
-.map-div, .chart-div, #bg1, #bg2, #hmap1 {
+/* Map / Chart Containers */
+.chart-div {
     flex: 2;
-    min-height: 300px;
-    background-color: #f5f5f5;
-    border-radius: 6px;
+    min-height: 350px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 5px;
 }
 
+.map-div {
+  flex: 2;
+  min-height: 350px;
+  max-width: 700px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+.map-section {
+  display: flex;
+  flex-wrap: wrap; /* allow responsiveness */
+  gap: 15px;
+  align-items: flex-start; /* top-align text and map */
+  justify-content: center; /* center the whole row horizontally */
+  margin-bottom: 40px;
+}
+
+/* Chart Wrapper */
 .chart-container {
     background: white;
     border-radius: 6px;
     padding: 15px;
+    margin-bottom: 20px;
 }
 
-@media (min-width: 900px) {
-    .map-row {
-        flex-direction: row;
-        align-items: stretch;
-    }
+.map-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 20px; 
 }
 
+/* Map Toggle */
+.map-toggle {
+    display: inline-block;
+    position: relative;
+    background: #f0f0f0;
+    border-radius: 25px;
+    padding: 5px;
+    font-family: sans-serif;
+    margin-bottom: 20px;
+    user-select: none;
+}
+
+.map-toggle input[type="radio"] {
+    display: none;
+}
+
+.map-toggle .toggle-slider {
+    display: flex;
+    position: relative;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.map-toggle .toggle-slider label {
+    flex: 1;
+    padding: 10px 30px;
+    text-align: center;
+    cursor: pointer;
+    z-index: 2;
+    transition: color 0.3s ease;
+    color: #555;
+    font-weight: 500;
+}
+
+.map-toggle .toggle-slider::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: #4caf50;
+    border-radius: 25px;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+
+#map1:checked ~ .toggle-slider::before {
+    transform: translateX(0%);
+}
+
+#map2:checked ~ .toggle-slider::before {
+    transform: translateX(100%);
+}
+
+#map1:checked ~ .toggle-slider label[for="map1"],
+#map2:checked ~ .toggle-slider label[for="map2"] {
+    color: white;
+}
+
+/* Responsive */
 @media (max-width: 600px) {
     .map-div, .chart-div {
         min-height: 250px;

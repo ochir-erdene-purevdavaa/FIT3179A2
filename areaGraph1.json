@@ -1,0 +1,32 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 700,
+  "height": 400,
+  "data": {
+    "url": "speciesGrowth.csv",
+    "format": {"type": "csv", "parse": {"mid_year": "number", "recinmil": "number"}}
+  },
+  "mark": {
+    "type": "area",
+    "interpolate": "monotone"
+  },
+  "encoding": {
+    "x": {
+      "field": "mid_year",
+      "type": "quantitative",
+      "title": "Mid-Year of Period"
+    },
+    "y": {
+      "field": "recinmil",
+      "type": "quantitative",
+      "title": "New Species Records (millions)"
+    },
+    "color": {
+      "value": "#4caf50" 
+    },
+    "tooltip": [
+      {"field": "mid_year", "type": "quantitative", "title": "Year"},
+      {"field": "recinmil", "type": "quantitative", "title": "Records (millions)"}
+    ]
+  }
+}

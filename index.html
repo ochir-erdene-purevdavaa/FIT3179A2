@@ -17,92 +17,147 @@
 <body>
 
   <header>
-    <h1>Australian Biodiversity</h1>
+    <h1>Australian Biodiversity Visualization</h1>
   </header>
 
+  <div class="intro-section" style="max-width: 700px; margin: 0 auto 40px; padding: 20px;">
+    <h2 style="margin-bottom: 10px; font-size: 1.5em;">Overview of Australian Biodiversity</h2>
+    <p style="font-size: 1.07em; line-height: 1.6; margin: 0;">
+      This dashboard explores the diversity of animal species across Australia’s states. 
+      It highlights overall species richness, functional group distribution, and relative abundance.
+      You will see which states have the highest biodiversity, which groups dominate, 
+      and where endangered species still require protection. The interactive maps and charts 
+      allow you to explore patterns across states, functional groups, and species counts.
+    </p>
+  </div>
+
   <main>
-    <!-- Map toggle -->
-    <div class="map-toggle">
-      <label>
-        <input type="radio" name="mapSwitch" value="map1" checked>
-        Map 1
-      </label>
-      <label>
-        <input type="radio" name="mapSwitch" value="map2">
-        Map 2
-      </label>
-    </div>
 
-    <!-- Map 1 Container -->
-    <div id="mapContainer1" class="map-container">
-      <div class="map-section flex-row">
-        <div class="map-text-side">
-          <strong>Overview of species richness by state:</strong>
-          <p>This map highlights the total number of species recorded in each Australian state. Darker colors indicate higher biodiversity. Some regions host rare or endangered species that require conservation efforts.</p>
-        </div>
-        <div id="map1" class="map-div"></div>
-      </div>
-    </div>
-
-    <!-- Map 2 Container-->
-    <div id="mapContainer2" class="map-container" style="display:none;">
-      <div class="map-section flex-row-reverse">
-        <div class="map-text-side">
-          <strong>Functional group richness by state:</strong>
-          <p>This map shows how many species belong to each functional group (Reptiles, Birds, Mammals, Fish, Insects, Other) per state. Some species are still endangered, while others are abundant. Compare biodiversity patterns across groups and regions.</p>
-        </div>
-        <div id="map2" class="map-div"></div>
-      </div>
-    </div>
-
-    <!-- Bar Chart 1 -->
+    <!--Line Graph: Number of Species listed-->
     <div class="chart-container flex-row">
       <div class="chart-text-side">
-        <strong>Species Richness by State:</strong>
-        <p>This bar chart shows the total number of species in each state. Some states have very high species diversity, while others host fewer species. Conservation priorities vary accordingly.</p>
+        <strong>Number of Species Listed under the EPBC Act</strong>
+        <p>Since the implementation of the EPBC Act, the number of species requiring legal protection has steadily increased. 
+          Certain years show large spikes in listings, reflecting growing awareness of endangered species and better data collection. 
+          This trend highlights the ongoing challenges in preserving Australia's unique biodiversity, as many species are still at risk despite decades of conservation legislation.</p>
       </div>
-      <div id="bg1" class="chart-div"></div>
+      <div id="lg1" class="chart-div"></div>
     </div>
 
-    <!-- Bar Chart 2  -->
+    <!-- Bar Chart 2: Functional Groups -->
     <div class="chart-container flex-row-reverse">
       <div class="chart-text-side">
-        <strong>Functional Group Richness by State:</strong>
-        <p>This stacked bar chart breaks down the total species into functional groups (Reptiles, Birds, Mammals, Fish, Insects, Other) per state. It helps identify which groups dominate in different regions and highlights conservation needs.</p>
+        <strong>Functional Group Richness by State</strong>
+        <p>This stacked bar chart breaks down species by functional groups (Reptiles, Birds, Mammals, Fish, Insects, Other) in each state. 
+        It highlights which groups dominate in different states and ecosystems. 
+        For example, insects are overwhelmingly numerous, while mammals are more localized. 
+        Birds are present in all regions but peak in Queensland and NSW.</p>
+        <p>These patterns provide insight into ecological balance and guide protection efforts.</p>
       </div>
       <div id="bg2" class="chart-div"></div>
     </div>
 
-    <!-- Heat Map -->
+        <!--Area Graph Growth in Number of Species-->
     <div class="chart-container flex-row">
       <div class="chart-text-side">
-        <strong>Relative Abundance of Australia's Species:</strong>
-        <p>This heat map visualizes the relative abundance of species across states and functional groups. Some areas show high biodiversity, while others are critical habitats for endangered species.</p>
+        <strong>Growth in Number of New Records for All Species</strong>
+        <p>Over time, the cumulative number of species recorded in Australia has grown consistently. 
+          This increase reflects both ongoing field surveys and improved methods of monitoring biodiversity. 
+          Some years see rapid additions, often due to the discovery of rare or previously unrecorded species. 
+          Tracking this growth allows scientists and policymakers to identify which ecosystems are being explored thoroughly and which may require further research and conservation attention.</p>
+        </div>
+      <div id="ag1" class="chart-div"></div>
+    </div>
+    
+    <!-- Map toggle -->
+    <div class = "map-wrapper">
+      <div class="map-toggle">
+        <input type="radio" name="mapSwitch" id="map1" value="map1" checked>
+        <input type="radio" name="mapSwitch" id="map2" value="map2">
+        
+        <div class="toggle-slider">
+          <label for="map1">Map 1</label>
+          <label for="map2">Map 2</label>
+        </div>
+      </div>
+
+      <!-- Map 1: Total Species Richness-->
+      <div id="mapContainer1" class="map-container">
+        <div class="map-section flex-row">
+          <div class="map-text-side">
+            <strong>Total Species Richness by State</strong>
+            <p>Australia hosts a wide variety of species. This map highlights the total number of species recorded in each state. Darker regions indicate higher biodiversity. 
+            States like Queensland and New South Wales host particularly rich ecosystems, while smaller territories like ACT have fewer species due to their size.</p>
+            <p>Conservation focus is essential in states with rare or endangered species.</p>
+          </div>
+          <div id="mapc1" class="map-div"></div>
+        </div>
+      </div>
+
+      <!-- Map 2: Functional Groups -->
+      <div id="mapContainer2" class="map-container" style="display:none;">
+        <div class="map-section flex-row">
+          <div class="map-text-side">
+            <strong>Functional Group Richness by State</strong>
+            <p>This map shows species counts by functional groups: Reptiles, Birds, Mammals, Fish, Insects, and Other in each state. 
+            It allows you to see which groups dominate particular regions. For example, insects dominate in all states by sheer numbers, while mammals are concentrated in specific habitats.</p>
+            <p>By exploring this map, you can identify states with higher proportions of endangered reptiles or unique bird species.</p>
+          </div>
+          <div id="mapc2" class="map-div"></div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Bar Chart 1: Species Richness -->
+    <div class="chart-container flex-row-reverse">
+      <div class="chart-text-side">
+        <strong>Species Richness by State</strong>
+        <p> 
+        States with higher species counts, such as Queensland and NSW, indicate rich ecosystems with diverse habitats. 
+        Smaller territories like ACT have fewer species due to limited land area.</p>
+        <p>Understanding these numbers helps prioritize conservation resources where they are most needed.</p>
+      </div>
+      <div id="bg1" class="chart-div"></div>
+    </div>
+
+    <!-- Heat Map: Relative Abundance -->
+    <div class="chart-container flex-row">
+      <div class="chart-text-side">
+        <strong>Relative Abundance of Species</strong>
+        <p>This heat map visualizes species abundance across states and functional groups. 
+        It highlights hotspots where biodiversity is concentrated and identifies regions where certain groups are underrepresented. 
+        This helps researchers focus on conservation for endangered species and ecosystems at risk.</p>
+        <p>For example, Mammals have a higher abundance index than other groups meaning they are at less risk of being endangered, while Amphibians are low in abundance showing higher risk.</p>
       </div>
       <div id="hmap1" class="chart-div"></div>
     </div>
 
   </main>
 
+
   <footer>
     <p>&copy; 2025 Australian Biodiversity Data</p>
   </footer>
 
   <script>
-    const container1 = document.getElementById('mapContainer1');
-    const container2 = document.getElementById('mapContainer2');
-    const radios = document.querySelectorAll('input[name="mapSwitch"]');
+    const map1Radio = document.getElementById("map1");
+    const map2Radio = document.getElementById("map2");
 
-    radios.forEach(radio => {
-      radio.addEventListener('change', () => {
-        if (radio.value === 'map1') {
-          container1.style.display = 'block';
-          container2.style.display = 'none';
-        } else {
-          container1.style.display = 'none';
-          container2.style.display = 'block';
-        }
-      });
+    const mapContainer1 = document.getElementById("mapContainer1");
+    const mapContainer2 = document.getElementById("mapContainer2");
+
+    map1Radio.addEventListener("change", () => {
+      if(map1Radio.checked){
+        mapContainer1.style.display = "block";
+        mapContainer2.style.display = "none";
+      }
+    });
+
+    map2Radio.addEventListener("change", () => {
+      if(map2Radio.checked){
+        mapContainer1.style.display = "none";
+        mapContainer2.style.display = "block";
+      }
     });
   </script>
 
