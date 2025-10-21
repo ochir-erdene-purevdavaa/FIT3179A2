@@ -155,6 +155,33 @@ main {
     color: white;
 }
 
+.annotation {
+  background-color: #f9f9f9;
+  border-left: 4px solid #48cfa2;
+  padding: 10px 15px;
+  margin: 15px 0;
+  font-size: 0.95rem;
+  color: #333;
+}
+svg {
+  cursor: pointer;
+}
+
+#lg1 svg {
+  cursor: default;
+}
+
+/* Pointer for interactive points (hover / selection) */
+#lg1 svg .mark-symbol, 
+#lg1 svg .mark-line {
+  cursor: pointer;
+}
+
+/* Pointer for legend items */
+#lg1 svg .legend-label, 
+#lg1 svg .legend-symbol {
+  cursor: pointer;
+}
 /* Responsive */
 @media (max-width: 600px) {
     .map-div, .chart-div {

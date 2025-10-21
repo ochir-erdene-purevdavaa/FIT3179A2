@@ -4,9 +4,21 @@
   "height": 400,
   "projection": {
     "type": "mercator",
-    "center": [135, -25]
+    "center": [135, -25],
+    "scale": 450,
+    "translate": [200, 200]
   },
   "layer": [
+    {
+      "data": {
+        "sphere": true
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "lightblue",
+        "stroke": "none"
+      }
+    },
     {
       "data": {
         "url": "states.json",

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
   "description": "Number of species listed under the EPBC Act, 2000–2020",
   "width": 800,
   "height": 400,
@@ -7,16 +7,35 @@
     "url": "bio1.csv"
   },
   "transform": [
-    {"fold": ["Mammals","Birds","Reptiles","Fish","Insects","Plants","Other"], "as": ["Group", "Species_Count"]}
+    {
+      "fold": ["Mammals","Birds","Reptiles","Fish","Insects","Plants","Other"],
+      "as": ["Group", "Species_Count"]
+    }
+  ],
+  "params": [
+    {
+      "name": "groupSelection",
+      "select": {"type": "point", "fields": ["Group"]},
+      "bind": "legend"
+    }
   ],
   "mark": {
     "type": "line",
-    "point": true
+    "point": true,
+    "cursor": "pointer"
   },
   "encoding": {
     "x": {"field": "Year", "type": "temporal", "title": "Year"},
     "y": {"field": "Species_Count", "type": "quantitative", "title": "Number of Species Listed"},
     "color": {"field": "Group", "type": "nominal", "title": "Species Group"},
+    "opacity": {
+      "condition": {"param": "groupSelection", "value": 1},
+      "value": 0.2
+    },
+    "size": {
+      "condition": {"param": "groupSelection", "value": 3},
+      "value": 1.5
+    },
     "tooltip": [
       {"field": "Year", "type": "temporal"},
       {"field": "Group", "type": "nominal"},
