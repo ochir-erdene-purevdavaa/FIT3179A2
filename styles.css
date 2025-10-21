@@ -1,6 +1,6 @@
 /* General Body */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     background-color: #e8f5e9;
     color: #333;
@@ -40,6 +40,7 @@ main {
 
 /* Text / Side Panels */
 .map-text-side, .chart-text-side {
+    font-family: 'Montserrat', sans-serif;
     flex: 1.2;
     min-width: 170px;
     max-width: 350px;
