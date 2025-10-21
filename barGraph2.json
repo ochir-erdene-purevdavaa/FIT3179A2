@@ -2,16 +2,20 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 700,
   "height": 400,
-  "data": {"url": "functional_group_richness_by_state.csv"},
+  "data": {"url": "cleaned_species_grouped.csv"},
   "mark": "bar",
   "encoding": {
-    "x": {"field": "State", "type": "ordinal"},
-    "y": {"field": "Species_Count", "type": "quantitative"},
-    "color": {"field": "Class", "type": "nominal"},
+    "x": {"field": "State", "type": "ordinal", "title": "State"},
+    "y": {"field": "Species_Count", "type": "quantitative", "title": "Species Count"},
+    "color": {"field": "Group", "type": "nominal", "title": "Functional Group"},
     "tooltip": [
       {"field": "State", "type": "nominal"},
-      {"field": "Class", "type": "nominal"},
-      {"field": "Species_Count", "type": "quantitative"}
+      {"field": "Group", "type": "nominal"},
+      {"field": "Species_Count", "type": "quantitative", "title": "Species Count"}
     ]
+  },
+  "config": {
+    "axis": {"labelFontSize": 12, "titleFontSize": 14},
+    "legend": {"titleFontSize": 13, "labelFontSize": 11}
   }
 }

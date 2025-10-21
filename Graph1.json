@@ -48,6 +48,7 @@
       "encoding": {
         "color": {
           "field": "Species_Count",
+          "title": "Species Count",
           "type": "quantitative",
           "scale": {"scheme": "viridis"}   
         },

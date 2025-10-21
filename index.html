@@ -17,58 +17,82 @@
 <body>
 
   <header>
-    <h1>Australian Animal Biodiversity</h1>
+    <h1>Australian Biodiversity</h1>
   </header>
 
   <main>
-    <!-- Map 1 with side text -->
-    <div class="map-section">
-      <div class="map-above-text">Overview of species richness by state.</div>
-      <div class="map-row"> 
-      <div id="map1" class="map-div"></div>
-        <div class="map-text">
-          This map shows the total species richness for each Australian state. Darker colors indicate higher richness.
-          You can explore which states host the most biodiversity.
+
+    <div class="map-toggle">
+      <label>
+        <input type="radio" name="mapSwitch" value="map1" checked>
+        Map 1
+      </label>
+      <label>
+        <input type="radio" name="mapSwitch" value="map2">
+        Map 2
+      </label>
+    </div>
+
+    <div id="mapContainer1" class="map-container">
+      <div class="map-section">
+        <div class="map-above-text">Overview of species richness by state.</div>
+        <div class="map-row"> 
+          <div id="map1" class="map-div"></div>
+          <div class="map-text">
+            This map shows the total species richness for each Australian state. Darker colors indicate higher richness.
+            You can explore which states host the most biodiversity.
+          </div>
         </div>
       </div>
     </div>
 
+    <div id="mapContainer2" class="map-container" style="display:none;">
+      <div class="map-section">
+        <div class="map-above-text">Functional group richness by state.</div>
+        <div class="map-row">
+          <div id="map2" class="map-div"></div>
+          <div class="map-text">
+            Lorem Ipsum.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <!--Bar 1-->
     <div class="chart-container">
         <div class="chart-title">Species Richness by State</div>
         <div id="bg1"></div>
     </div>
 
-    <!-- Map 2 -->
-    <div class="map-section">
-      <div class="map-above-text">Functional group richness by state.</div>
-      <div class="map-row">
-      <div id="map2" class="map-div"></div>
-      <div class="map-text">
-          Lorem Ipsum.
-        </div>
-      </div>
-    </div>
-
+    <!--Bar 2-->
     <div class="chart-container">
         <div class="chart-title">Functional Group Richness by State</div>
         <div id="bg2"></div>
-    </div>
-
-    <!-- Map 3 -->
-    <div class="map-section">
-      <div class="map-above-text">Individual species distribution points.</div>
-      <div class="map-row">
-      <div id="map3" class="map-div"></div>
-      <div class="map-text">
-          Lorem Ipsum.
-        </div>
-      </div>
     </div>
   </main>
 
   <footer>
     <p>&copy; 2025 Australian Biodiversity Data</p>
   </footer>
+
+  <script>
+    const container1 = document.getElementById('mapContainer1');
+    const container2 = document.getElementById('mapContainer2');
+    const radios = document.querySelectorAll('input[name="mapSwitch"]');
+
+    radios.forEach(radio => {
+      radio.addEventListener('change', () => {
+        if (radio.value === 'map1') {
+          container1.style.display = 'block';
+          container2.style.display = 'none';
+        } else {
+          container1.style.display = 'none';
+          container2.style.display = 'block';
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>

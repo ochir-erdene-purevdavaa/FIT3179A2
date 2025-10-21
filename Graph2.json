@@ -46,11 +46,12 @@
       "encoding": {
         "color": {
             "field": "Sightings_Count", 
+            "title": "Animal Sightings",
             "type": "quantitative", 
-            "scale": {"scheme": "magma"}},
+            "scale": {"scheme": "viridis"}},
         "tooltip": [
           {"field": "properties.STATE_NAME", "title": "State"},
-          {"field": "Species_Count", "title": "Species Count"}
+          {"field": "Sightings_Count", "title": "Animal Sightings"}
         ]
       }
     }

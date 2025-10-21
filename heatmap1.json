@@ -1,0 +1,22 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 600,
+  "height": 300,
+  "data": { "url": "threatened-species2.csv" },
+  "mark": "rect",
+  "encoding": {
+    "x": { "field": "Year", "type": "ordinal", "title": "Year" },
+    "y": { "field": "TaxonomicGroup", "type": "nominal", "title": "Taxonomic Group" },
+    "color": {
+      "field": "ThreatIndex",
+      "type": "quantitative",
+      "scale": { "scheme": "viridis" },
+      "title": "Relative Abundance Index"
+    },
+    "tooltip": [
+      { "field": "Year", "type": "ordinal" },
+      { "field": "TaxonomicGroup", "type": "nominal" },
+      { "field": "ThreatIndex", "type": "quantitative" }
+    ]
+  }
+}

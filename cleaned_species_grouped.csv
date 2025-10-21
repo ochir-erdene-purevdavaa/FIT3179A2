@@ -1,0 +1,49 @@
+State,Group,Species_Count
+Australian Capital Territory,Reptiles,50
+Australian Capital Territory,Birds,259
+Australian Capital Territory,Mammals,47
+Australian Capital Territory,Fish,54
+Australian Capital Territory,Insects,1700
+Australian Capital Territory,Other,224
+New South Wales,Reptiles,185
+New South Wales,Birds,633
+New South Wales,Mammals,154
+New South Wales,Fish,621
+New South Wales,Insects,4057
+New South Wales,Other,247
+Northern Territory,Reptiles,144
+Northern Territory,Birds,312
+Northern Territory,Mammals,48
+Northern Territory,Fish,91
+Northern Territory,Insects,736
+Northern Territory,Other,103
+Queensland,Reptiles,309
+Queensland,Birds,736
+Queensland,Mammals,147
+Queensland,Fish,772
+Queensland,Insects,5164
+Queensland,Other,352
+South Australia,Reptiles,145
+South Australia,Birds,494
+South Australia,Mammals,74
+South Australia,Fish,247
+South Australia,Insects,1220
+South Australia,Other,577
+Tasmania,Reptiles,17
+Tasmania,Birds,247
+Tasmania,Mammals,66
+Tasmania,Fish,116
+Tasmania,Insects,1031
+Tasmania,Other,131
+Victoria,Reptiles,98
+Victoria,Birds,509
+Victoria,Mammals,91
+Victoria,Fish,198
+Victoria,Insects,2799
+Victoria,Other,200
+Western Australia,Reptiles,264
+Western Australia,Birds,472
+Western Australia,Mammals,87
+Western Australia,Fish,596
+Western Australia,Insects,1166
+Western Australia,Other,344
