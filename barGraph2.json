@@ -3,11 +3,22 @@
   "width": 700,
   "height": 400,
   "data": {"url": "cleaned_species_grouped.csv"},
+  "params": [
+    {
+      "name": "groupSelection",
+      "select": {"type": "point", "fields": ["Group"]},
+      "bind": "legend"
+    }
+  ],
   "mark": "bar",
   "encoding": {
     "x": {"field": "State", "type": "ordinal", "title": "State"},
     "y": {"field": "Species_Count", "type": "quantitative", "title": "Species Count"},
     "color": {"field": "Group", "type": "nominal", "title": "Functional Group"},
+    "opacity": {
+      "condition": {"param": "groupSelection", "value": 1},
+      "value": 0.2
+    },
     "tooltip": [
       {"field": "State", "type": "nominal"},
       {"field": "Group", "type": "nominal"},

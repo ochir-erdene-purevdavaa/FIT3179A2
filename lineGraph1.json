@@ -12,36 +12,58 @@
       "as": ["Group", "Species_Count"]
     }
   ],
-  "params": [
+  "layer": [
     {
-      "name": "groupSelection",
-      "select": {"type": "point", "fields": ["Group"]},
-      "bind": "legend"
+      "params": [
+      {
+        "name": "groupSelection",
+        "select": {"type": "point", "fields": ["Group"]},
+        "bind": "legend"
+      }],
+      "mark": {
+        "type": "line",
+        "point": true,
+        "cursor": "pointer"
+      },
+      "encoding": {
+        "x": {"field": "Year", "type": "temporal", "title": "Year"},
+        "y": {"field": "Species_Count", "type": "quantitative", "title": "Number of Species Listed"},
+        "color": {"field": "Group", "type": "nominal", "title": "Species Group"},
+        "opacity": {
+          "condition": {"param": "groupSelection", "value": 1},
+          "value": 0.2
+        },
+        "size": {
+          "condition": {"param": "groupSelection", "value": 3},
+          "value": 1.5
+        },
+        "tooltip": [
+          {"field": "Year", "type": "temporal"},
+          {"field": "Group", "type": "nominal"},
+          {"field": "Species_Count", "type": "quantitative"}
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {"Year": "2010-01-01", "Species_Count": 130, "text": "Plants were the most common to find new species"}
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 5,
+        "dy": -5,
+        "color": "grey"
+      },
+      "encoding": {
+        "x": {"field": "Year", "type": "temporal"},
+        "y": {"field": "Species_Count", "type": "quantitative"},
+        "text": {"field": "text"}
+      }
     }
   ],
-  "mark": {
-    "type": "line",
-    "point": true,
-    "cursor": "pointer"
-  },
-  "encoding": {
-    "x": {"field": "Year", "type": "temporal", "title": "Year"},
-    "y": {"field": "Species_Count", "type": "quantitative", "title": "Number of Species Listed"},
-    "color": {"field": "Group", "type": "nominal", "title": "Species Group"},
-    "opacity": {
-      "condition": {"param": "groupSelection", "value": 1},
-      "value": 0.2
-    },
-    "size": {
-      "condition": {"param": "groupSelection", "value": 3},
-      "value": 1.5
-    },
-    "tooltip": [
-      {"field": "Year", "type": "temporal"},
-      {"field": "Group", "type": "nominal"},
-      {"field": "Species_Count", "type": "quantitative"}
-    ]
-  },
   "config": {
     "axis": {"labelFontSize": 12, "titleFontSize": 14},
     "legend": {"titleFontSize": 13, "labelFontSize": 11}
